@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    background: url(../image/duck.jpg) no-repeat center center fixed;
+    background-size: cover;
+    z-index: -10;
+    user-select: none;
+}
+
+hr {
+    /* tips: 上右下左，上-右左-下，上下-右左，顺时针 */
+    margin: 15px 15px;
+}
+
+li {
+    text-indent: 1em;
+    text-align: left;
+}
+
+.ado {
+    position: fixed;
+    left: 3%;
+    top: 5%;
+    border-radius: 50px;
+    box-shadow: #999 5px 5px;
+    border: pink solid 3px;
+}
+
+.github {
+    position: fixed;
+    left: 3%;
+    top: 13%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: black solid 3px;
+    box-shadow: #999 4px 4px;
+    z-index: 0;
+}
+
+.contHead {
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+    padding: 15px 15px;
+    overflow: hidden;
+}
+
+.header {
+    color: paleturquoise;
+    width: 25%;
+    text-align: center;
+    margin: 0px auto 0px;
+    border: 5px ridge paleturquoise;
+    background-color: #999;
+}
+
+.content {
+    width: 55%;
+    height: auto;
+    margin: 10px auto 0px;
+    padding: 10px 10px;
+    background-color: rgb(250, 249, 218);
+    border: 5px ridge paleturquoise;
+    text-align: center;
+}
+
+p.head {
+    text-indent: 2em;
+}
+
+.grColor {
+    width: 45%;
+    margin: auto;
+    color: #999;
+    background: snow;
+    border: black solid 3px;
+    border-radius: 10px;
+}
+
+.vdo1 {
+    width: 60%;
+    height: auto;
+    margin: 30px auto 0px;
+    border: black solid 5px;
+    border-radius: 5px;
+}
+
+.blbl {
+    color: plum;
+    text-decoration: none;
+}
+
+.blbl:hover {
+    color: pink;
+}

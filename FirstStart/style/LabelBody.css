@@ -1,0 +1,52 @@
+.contBody {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: rgb(250, 249, 218, 0.35);
+}
+
+.contBody::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.headLeft {
+    float: left;
+    width: 69%;
+    height: 190px;
+    background-color: snow;
+    overflow: hidden;
+    border: purple 5px solid;
+    border-radius: 10px;
+}
+
+.imgHdR {
+    background: url(../image/HAHA.gif) no-repeat center center;
+    background-size: cover;
+    float: right;
+    width: 29%;
+    height: 190px;
+    border: black 5px solid;
+    border-radius: 5px;
+}
+
+.caseElse {
+    width: 100%;
+    float: right;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    border: black 5px solid;
+    background-color: snow;
+}
+
+.caseElse h3 {
+    background-color: orange;
+    border-top: 10px solid #999;
+    border-bottom: 10px solid #999;
+    margin-bottom: 5px;
+}
