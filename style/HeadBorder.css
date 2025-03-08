@@ -63,7 +63,9 @@ body {
 }
 
 .test {
+    width: 100px;
     height: 1500px;
-    width: 20px;
+    margin: auto;
     border: red 1px solid;
+    text-align: center;
 }
