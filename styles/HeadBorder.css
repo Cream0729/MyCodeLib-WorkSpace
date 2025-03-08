@@ -10,10 +10,6 @@ body {
     user-select: none;
 }
 
-hr {
-    margin: 10px 5px;
-}
-
 .text-head {
     text-indent: 2em;
     line-height: 1.5em;
