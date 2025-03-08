@@ -10,6 +10,19 @@ body {
     user-select: none;
 }
 
+hr {
+    margin: 10px 5px;
+}
+
+.text-head {
+    text-indent: 2em;
+    line-height: 1.5em;
+}
+
+.text-center {
+    text-align: center;
+}
+
 .github {
     position: fixed;
     left: 3%;
@@ -55,11 +68,6 @@ body {
     background: rgb(255, 255, 255, 0.7);
     border-radius: 10px;
     overflow: hidden;
-}
-
-.text-head {
-    text-indent: 2em;
-    line-height: 1.5em;
 }
 
 .test {
