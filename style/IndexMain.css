@@ -1,0 +1,8 @@
+.test {
+    margin: auto;
+    width: 60%;
+    height: 1500px;
+    border: 5px solid red;
+    border-radius: 10px;
+    text-align: center;
+}

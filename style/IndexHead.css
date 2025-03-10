@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 100px 0;
+    background: url("../image/background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+hr {
+    margin: 20px 10%;
+}
+
+.head-attention {
+    color: red;
+    text-align: center;
+}
+
+.text-head {
+    text-indent: 2em;
+    line-height: 1.5em;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.table {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    height: 90px;
+    min-width: 500px;
+    padding: 10px 0 15px 0;
+    background: rgb(50, 50, 150);
+    border-left: blue solid 3px;
+    border-right: blue solid 3px;
+    border-bottom: blue solid 3px;
+    border-radius: 0 0 50px 50px;
+}
+
+.utils {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    padding: 5px;
+    margin: 0 auto;
+    overflow: hidden;
+    justify-content: center;
+    border-bottom: rgb(255, 255, 255) 3px solid;
+    border-radius: 15%;
+}
+
+.util {
+    display: flex;
+    height: 100%;
+    margin: 0 20px 0;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    flex-direction: column;
+    border: rgb(0, 0, 0) 3px solid;
+    background: rgb(145, 145, 145);
+}
+
+.logo {
+    display: block;
+    width: 30%;
+    min-width: 150px;
+    margin: 5px auto 10px;
+}
+
+.head-table {
+    height: auto;
+    padding: 1% 10px 5px;
+    margin: 1% 20% 20px;
+    background: rgb(250, 249, 218, 0.3);
+    border-radius: 10px;
+}
+
+.header {
+    margin: 0 1% 0;
+    padding: 15px 3% 5px;
+    border: 7px ridge skyblue;
+    border-right: 7px groove skyblue;
+    border-bottom: 7px groove skyblue;
+    background: rgb(255, 255, 255, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
