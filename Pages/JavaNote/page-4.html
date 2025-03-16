@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jv-page-4</title>
+    <link rel="stylesheet" href="page-style.css">
+</head>
+<body>
+<h1 class="H-title">4. 条件控制语句</h1>
+<p style="color: red">对此，我将自制简单的流程图来辅助说明。</p>
+
+<hr style="margin: 2em 0">
+
+<div class="main-box">
+    <div class="af-box">
+        <h2 class="text-center">基础的条件控制流程图</h2>
+        <img alt="条件控制流程图" class="img-center" src="./Page-image/if-else.png"
+             style="height: 30vh" title="条件控制流程图">
+    </div>
+
+    <hr style="margin: 2em 0">
+
+    <div class="af-box">
+        <h2>条件语句</h2>
+        <br>
+        <p class="H-text">条件语句有“if”、“if-else”、“if-else if”以及更多的搭配。
+            其格式中，if和else if必须要有boolean表达式，如if( true )、else if( false )、if(a > b)、else if(a < b) 等等。</p>
+        <br>
+
+        <h3 class="H-title">if - else 示例</h3>
+        <p class="H-text">在以下示例中，判断 a 是否大于 b。如果条件成立，输出 "a 大于 b"；否则，输出 "a 不大于 b"。
+            运行结果将是 "a 不大于 b"。</p>
+        <pre>
+            <code>
+package PgName;
+
+public class Main {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 20;
+
+        if (a > b) {
+            System.out.println("a 大于 b");
+        } else {
+            System.out.println("a 不大于 b");
+        }
+    }
+}
+            </code>
+        </pre>
+        <br>
+
+        <h3 class="H-title">if - if 示例</h3>
+        <p class="H-text">在以下示例中，分别判断 a 是否大于 b 和 b 是否小于 c。两个判断语句是独立的，互不影响。运行结果将是 "b 小于 c"。</p>
+        <pre>
+            <code>
+package PgName;
+
+public class Main {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 20;
+        int c = 30;
+
+        if (a > b) {
+            System.out.println("a 大于 b");
+        }
+        if (b < c) {
+            System.out.println("b 小于 c");
+        }
+    }
+}
+            </code>
+        </pre>
+        <br>
+
+        <h3 class="H-title">if - else if 示例</h3>
+        <p class="H-text">在以下示例中，首先判断 a 是否大于 b。如果不成立，则继续判断 b 是否小于 c。
+            如果以上条件都不成立，则执行 else 中的代码块。运行结果将是 "a > b 和 b < c 都不成立！"。
+        </p>
+        <pre>
+            <code>
+package PgName;
+
+public class Main {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 17;
+        int c = 13;
+
+        if (a > b) {
+            System.out.println("a > b 是真的！");
+        } else if (b < c) {
+            System.out.println("b < c 是真的！");
+        } else {
+            System.out.println("a > b 和 b < c 都不成立！");
+        }
+    }
+}
+            </code>
+        </pre>
+        <br>
+
+        <h3>switch语句</h3>
+        <br>
+
+        <p class="H-text">
+            switch语句是一种多分支选择语句，它根据表达式的值来决定执行哪一段代码块。与if语句相比，switch语句在处理多个离散条件时更加简洁和高效。
+        </p>
+        <p class="H-text">switch语句会根据case标签的值在底层生成一个<strong>映射表</strong> ，用于快速定位到对应的代码块，从而提高程序的执行效率，
+            但是因为其 case xxx : 中的xxx所使用的不是布尔值（boolean），所以无法决定其范围。
+            当然，你也可以在switch()的表达式中传入布尔值，但是实际上这样做并不合适。
+        </p>
+        <br>
+
+        <h4 class="H-title">代码演示</h4>
+        <pre>
+            <code>
+package PgName;
+
+public class Main {
+    public static void main(String[] args) {
+        int day = 3;
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("Invalid day");
+        }
+    }
+}
+            </code>
+        </pre>
+        <p class="H-text">在这个示例中，switch语句根据变量day的值来决定执行哪个case块。对于本例来说，day的值是 3，则输出的是 case 3:
+            对应的"Wednesday"。
+            如果day的值不在1到7之间，则执行default块，输出"Invalid day"。
+        </p>
+    </div>
+</div>
+
+<hr style="margin: 2em 0">
+
+<div class="used-box">
+    <h2>P-3 的小练习做完了吗？现在展示答案咯（print不限）：</h2>
+    <ul class="B-mv">
+        <li>题一：<code>System.out.print(a+b);</code></li>
+        <li>题二：<code>System.out.print((a+c)*b);</code></li>
+        <li>题三：<code>System.out.print((a%10)*1000) + ((a/10%10)*100) + ((a/100%10) * 10) + (a/1000);</code></li>
+        <li>题四：<code>System.out.printf("%o", ~(int)'你');</code></li>
+    </ul>
+    <br>
+
+    <p>怎么样，你做对了吗？</p>
+    <p>这些是为了锻炼你最基础的思维，后续一般不使用这种硬编码。因此，随着学习历程的发展，你就会知道它的作用了。</p>
+</div>
+
+<hr style="margin: 2em 0">
+
+<a class="prev-Pg" href="./page-3.html"><h3 class="title-Pg"><<< 上一页</h3></a>
+<a class="next-Pg" href="./page-5.html"><h3 class="title-Pg">下一页 >>></h3></a>
+</body>
+</html>

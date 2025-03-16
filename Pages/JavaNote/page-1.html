@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jv-page-1</title>
+    <link href="page-style.css" rel="stylesheet">
+</head>
+<body>
+<h1 class="H-title">1. Java基础导论</h1>
+<hr style="margin: 2em 0">
+
+<div class="main-box">
+    <div class="af-box">
+        <h2>关于内容设计</h2>
+        <br>
+        <p class="H-text">对我而言，学习每一样编程语言，最重要的是去<strong>实践</strong>，而非简单的记笔记、看书、了解理论所能比及的。
+            当你在实践过程中，遇到那形形色色的bug，都将为你推动编程思维的发展，就比如值传递还是引用传递、操作对象能否实现、字符乱码等等。
+            在<strong>每次学习后展开想象</strong>，以自己的想法来作为引导，一步一步将其实现，从简单到复杂、从杂乱到有序，这都是学习中必不可少的。
+        </p>
+        <p class="H-text">对于本站而言，本质上并非教育所用，而是个人对学习历程的总结、探索、寻找细节等，
+            因此<strong>只能视作笔记</strong>。当然，对于每个章节所对应的布局顺序，
+            以及小练习仍是针对<strong>初学者</strong>而设计的。
+            况且，我个人认为这些并不一定适合绝大多数人，且对于本站性质来说也不是专注于公众（没时间进行打理，但是如首页所示，我仍会实现）。
+            但是说不定有人正需要它，而且我更喜欢往“奇奇怪怪的地方发展”，为首的是我自己在整理过程中去发现/发掘那一处处细节。
+        </p>
+        <p>所以，本站本质上是个人笔记，不可能对所有内容进行彻底的解析，对于想要探索以及深入理解之处自行搜索，
+            毕竟自己所想要了解的，要自己去找才有更好的价值
+        </p>
+        <br>
+
+        <h3 class="H-text">最后！</h3>
+        <br>
+
+        <p class="T-center" style="color: red"><strong>愿你在学习过程中得到质的飞跃！</strong></p>
+        <p class="T-center" style="color: red"><strong>愿你在实践过程中获得实现所想的激情！</strong></p>
+    </div>
+
+    <hr style="margin: 2em 0">
+
+    <div class="af-box">
+        <h2>Java语言特点简述</h2>
+        <br>
+
+        <p class="H-text">Java是一种广泛使用的高级编程语言，具有多种显著的特点：</p>
+        <br>
+
+        <div class="B-mv">
+            <ul class="B-mv">
+                <li><strong>简单性：</strong>Java语法简洁，去掉了指针等复杂特性，降低了学习难度。</li>
+                <li><strong>面向对象：</strong>支持封装、继承和多态，增强了代码的可复用性和可维护性。</li>
+                <li><strong>平台无关性：</strong>Java代码编译为字节码，可在任何支持JVM的平台上运行。</li>
+                <li><strong>健壮性：</strong>通过异常处理和垃圾回收机制，提高了程序的稳定性和可靠性。</li>
+                <li><strong>安全性：</strong>提供沙箱机制和数字签名，确保代码的安全性。</li>
+                <li><strong>多线程：</strong>内置多线程支持，允许开发者轻松创建和管理线程。</li>
+                <li><strong>分布式：</strong>支持远程方法调用（RMI）和企业级应用开发。</li>
+                <li><strong>高性能：</strong>通过即时编译（JIT）技术，提高了运行效率。</li>
+                <li><strong>丰富的标准库：</strong>提供丰富的API和第三方库，支持各种开发需求。</li>
+            </ul>
+        </div>
+        <br>
+
+        <p class="H-text">Java语言因其简单性、面向对象特性、平台无关性、健壮性、安全性、多线程支持和高性能等特点，
+            成为一种广泛应用于企业级应用、移动开发（Android）、云计算和大数据处理的编程语言。
+        </p>
+    </div>
+
+    <hr style="margin: 2em 0">
+
+    <div class="af-box">
+        <h2>Java语言的安全性特点</h2>
+        <br>
+        <div class="H-title">
+            <p class="H-text">Java语言在设计时特别注重安全性，这体现在多个方面，<strong style="color: red">包括</strong>变量的初始化规则，
+                且Java是大小写敏感的。<strong>以本例来说</strong>，以下通过与C++的对比，展示Java在安全性方面的优势。
+            </p>
+            <br>
+
+            <h3>变量初始化的对比</h3>
+            <p class="H-text"><strong>在C++中：</strong></p>
+            <div class="B-mv">
+                <ul class="B-mv">
+                    <li>基本数据类型的变量在声明时如果没有显式初始化，其值是不确定的。</li>
+                    <li>局部变量（存储在栈中）不会自动初始化，其值是随机的。</li>
+                    <li>全局变量和静态变量会自动初始化为零。</li>
+                </ul>
+                <br>
+
+                <p><strong>在Java中：</strong></p>
+                <ul class="B-mv">
+                    <li>所有<strong style="color: red">类变量</strong>在声明时如果没有显式赋值，会被赋予默认值。</li>
+                    <li>局部变量必须显式初始化，否则编译器会报错。</li>
+                    <li>类的成员变量（包括全局变量）会自动初始化为默认值。例如：</li>
+                    <ul class="B-mv">
+                        <li><code>int</code> 默认值为 <code>0</code></li>
+                        <li><code>long</code> 默认值为 <code>0.0L</code></li>
+                        <li><code>char</code> 默认值为 <code>0</code>（即空字符）</li>
+                        <li><code>boolean</code> 默认值为 <code>false</code></li>
+                        <li><code>float</code> 和 <code>double</code> 默认值为 <code>0.0</code></li>
+                        <li>引用类型（如对象）默认值为 <code>null</code></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr style="margin: 2em 0">
+
+    <div class="af-box">
+        <h2>Java的安全性优势</h2>
+        <br>
+
+        <div class="B-mv">
+            <p class="H-text"><strong style="color: red">以本例来说</strong>，Java通过强制初始化变量，避免了未初始化变量可能导致的错误和安全隐患。
+                这种设计减少了程序运行时的不确定性，提高了代码的可读性和可靠性。
+            </p>
+            <p class="H-text">例如，在C++中，未初始化的局部变量可能导致不可预测的行为，
+                而Java通过强制显式初始化或提供默认值，确保了变量在使用前总是处于已定义的状态。
+            </p>
+            <br>
+
+            <h3 class="H-text">示例代码：</h3>
+            <pre>
+        <p><strong>Java代码示例：</strong></p>
+                <code>
+public class Example {
+    int num; // 成员变量，自动初始化为0
+    String str; // 成员变量，自动初始化为null
+
+    public void method() {
+        int localNum; // 局部变量，必须显式初始化
+        // localNum = 10; // 必须初始化，否则编译器报错
+        System.out.println(num); // 输出0
+        System.out.println(str); // 输出null
+    }
+}
+                </code>
+            </pre>
+
+            <pre>
+            <p><strong>C++代码示例：</strong></p>
+                <code>
+#include &lt;iostream&gt;
+
+int main() {
+    // 未初始化可能会有段错误、“随机值”
+    int globalNum; // 全局变量，自动初始化为0
+    int localNum; // 局部变量，未初始化，值不确定
+    std::cout << globalNum << std::endl; // 输出0
+    std::cout << localNum << std::endl; // 输出不确定的值
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+
+        <p class="T-center">
+            通过上述对比可以看出，Java在变量初始化方面的设计更加安全，减少了因未初始化变量而导致的错误。
+        </p>
+    </div>
+</div>
+
+<hr style="margin: 2em 0">
+
+<div class="used-box">
+    <h1>参考文献</h1>
+    <ol class="head-mv">
+        <li>Oracle. (n.d.). <em>Java Language Specification</em>. Retrieved from <a
+                href="https://docs.oracle.com/javase/specs/">https://docs.oracle.com/javase/specs/</a></li>
+        <li>ISO/IEC. (2020). <em>ISO/IEC 14882:2020 - Programming languages — C++</em>. Retrieved from <a
+                href="https://www.iso.org/standard/76795.html">https://www.iso.org/standard/76795.html</a></li>
+        <li>Bloch, J. (2018). <em>Effective Java</em>. Pearson Education.</li>
+        <li>Lippman, S. B., Lajoie, J., & Moo, B. E. (2012). <em>C++ Primer</em>. Addison-Wesley.</li>
+        <li>Stack Overflow. (n.d.). <em>Java Variable Initialization</em>. Retrieved from <a
+                href="https://stackoverflow.com/questions/4748341/java-variable-initialization">https://stackoverflow.com/questions/4748341/java-variable-initialization</a>
+        </li>
+        <li>GeeksforGeeks. (n.d.). <em>C++ Variable Initialization</em>. Retrieved from <a
+                href="https://www.geeksforgeeks.org/variable-initialization-in-c/">https://www.geeksforgeeks.org/variable-initialization-in-c</a>
+        </li>
+    </ol>
+</div>
+
+<hr style="margin: 2em 0">
+
+<div class="prev-Pg"><h3 class="title-Pg" style="color: black">已经是第一页啦！</h3></div>
+<a class="next-Pg" href="./page-2.html"><h3 class="title-Pg">下一页 >>></h3></a>
+</body>
+</html>

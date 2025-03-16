@@ -1,0 +1,135 @@
+* {
+    user-select: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+/* 头菜单栏 - 快捷方式 */
+.head-table {
+    max-height: 75px;
+    min-height: 75px;
+    padding: 10px 5px 5px;
+    border: black solid 1px;
+    background: rgb(255, 190, 80);
+    border-bottom: 3px solid black;
+}
+
+.SC-table {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 3px 0 0 3px;
+    border-radius: 0 20% 0 0;
+    border-top: rgb(255, 255, 255) 3px solid;
+    border-left: rgb(255, 255, 255) 3px solid;
+}
+
+.SC-search {
+    display: inline-block;
+    float: right;
+    height: 75%;
+    width: 20%;
+    margin: 8px 15% 8px 0;
+    border-radius: 30px;
+    border: rgb(0, 0, 0) 2px solid;
+    background-color: rgb(255, 255, 255);
+}
+
+.SC-house {
+    display: inline-block;
+    margin: 0 10px 0 0;
+    padding: 5px;
+    height: 100%;
+    aspect-ratio: 1/1;
+    border: rgb(0, 0, 0) 3px solid;
+    background-color: rgb(255, 255, 255);
+}
+
+.shortCut {
+    display: inline-block;
+    margin: 0 10px;
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 15px;
+    border: rgb(0, 0, 0) 3px solid;
+    background-color: rgb(255, 255, 255);
+}
+
+.SC-house:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+.shortCut:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+/* 主页面 - 侧边栏和文本视图 */
+.main-table {
+    flex: 1;
+    display: flex;
+}
+
+/* 菜单板块 */
+.menu {
+    flex: 3;
+    display: flex;
+    overflow-y: auto;
+    flex-direction: column;
+    border-right: black solid 3px;
+    background-color: rgb(233, 233, 255);
+}
+
+/* 上板块 - 选择栏 */
+.menu-up {
+    height: 60vh;
+    direction: rtl;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-bottom: 1em;
+    padding-bottom: 25vh;
+    border-radius: 0 0 7px 7px;
+    border-bottom: black solid 2px;
+    background: rgb(255, 255, 255, 0.75);
+}
+
+/* 下板块 - 公告栏 */
+.menu-down {
+    flex: 1;
+    margin-top: 1em;
+    overflow-y: auto;
+    padding: 0 0 0 1em;
+    border-radius: 7px 7px 0 0;
+    border-top: black solid 2px;
+    background: rgb(255, 255, 255, 0.75);
+}
+
+/* 文本视图板块 */
+.cont {
+    flex: 17;
+    border: none;
+}
+
+/* 其余预设 */
+
+.text-mv {
+    text-indent: 2em;
+}
+
+.test {
+    display: block;
+    height: 45px;
+    width: 100%;
+    text-align: center;
+    line-height: 45px;
+    border-bottom: 3px solid blue;
+    background: #999;
+}

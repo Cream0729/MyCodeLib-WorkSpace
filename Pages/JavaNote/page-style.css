@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 10vh 12vw 50vh;
+    background: rgb(255, 240, 200);
+}
+
+pre {
+    margin: 1em 0;
+    overflow: auto;
+    padding-left: 2em;
+    border: 3px solid rgb(0, 0, 0, 0.5);
+    background: rgb(255, 255, 255, 0.75);
+}
+
+pre code {
+    user-select: text !important;
+}
+
+.prev-Pg {
+    float: left;
+    width: auto;
+    height: 50px;
+    margin-left: 5%;
+    border-radius: 10px;
+    text-decoration: none;
+    border: solid 5px rgb(0, 0, 0, 0.5);
+}
+
+.next-Pg {
+    float: right;
+    width: auto;
+    height: 50px;
+    margin-right: 5%;
+    border-radius: 10px;
+    text-decoration: none;
+    border: solid 5px rgb(0, 0, 0, 0.5);
+}
+
+.title-Pg {
+    margin: 0 1em;
+    line-height: 40px;
+    text-align: center;
+    color: rgb(128, 0, 128);
+}
+
+.title-Pg:hover {
+    color: rgb(255, 0, 0);
+}
+
+.main-box {
+    width: 90%;
+    margin: auto;
+    padding: 0 3vw;
+}
+
+.af-box {
+    width: 90%;
+    margin: auto;
+    padding: 1em 3em;
+    border-radius: 2em;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.text-box {
+    margin: 0.5em auto;
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    border: 2px solid rgb(0, 0, 0, 0.5);
+    background-color: rgb(255, 255, 255, 0.75);
+}
+
+.used-box {
+    width: 80%;
+    margin: auto;
+    overflow-x: auto;
+    padding: 1em 4em;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0, 0.5);
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+.B-center {
+    display: block;
+    margin: auto;
+}
+
+.img-center {
+    display: block;
+    margin: auto;
+}
+
+.H-title {
+    padding-left: 1em;
+}
+
+.H-text {
+    text-indent: 2em;
+    padding: 3px 0;
+}
+
+.T-center {
+    text-align: center;
+}
+
+.B-mv {
+    padding-left: 2em;
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jv-page-3</title>
+    <link href="page-style.css" rel="stylesheet">
+</head>
+<body>
+<h1 class="H-title">3. 运算符使用</h1>
+<p style="color: red">关于运算符的优先级等更多内容，将不进行详细讲解。</p>
+
+<hr style="margin: 2em 0">
+
+<div class="main-box">
+    <div class="af-box">
+        <h2>算术运算符</h2>
+        <p class="H-text">算术运算符有：“ + ”、“ - ”、“ * ”、“ / ”、“ % ”，以下是直接的代码演示：</p>
+        <pre>
+            <code>
+public static void main(String[] args) {
+    int num1 = 20;
+    int num2 = 5;
+    System.out.println(num1 + num2);    // 输出：25
+    System.out.println(num1 - num2);    // 输出：15
+    System.out.println(num1 * num2);    // 输出：100
+    System.out.println(num1 / num2);    // 输出：4
+    System.out.println(num1 % 3);  // 输出：2（20/3=6...2 - 6余2，而取余则是取其中的2）
+}
+            </code>
+        </pre>
+        <br>
+
+        <h2>赋值运算符</h2>
+        <p class="H-text">赋值运算符有：“ = ”、“ += ”、“ *= ”、“ /= ”、“ %= ”，以下是直接的代码演示：</p>
+        <pre>
+            <code>
+public static void main(String[] args) {
+    int num = 0;    // 初始化
+    num += 10;  // 此时num = 10, 就像是num = num + 10
+    num -= 4;   // 由于上一个例子num已经是10了，也就是现在num=6
+    num /= 2;   // 以此类推，现在num=3
+    num %= 2;   // 以此类推，现在num=1
+}
+            </code>
+        </pre>
+        <br>
+
+        <h2>关系运算符</h2>
+        <p class="H-text">关系运算符有：“ > ”、“ < ”、“ >= ”、“ <= ”、“ == ”、“ != ”，以下是直接的代码演示：</p>
+        <pre>
+            <code>
+public static void main(String[] args) {
+    int num1 = 15;
+    int num2 = 5;
+    System.out.println(num1 > num2);    // 输出true
+    System.out.println(num1 < num2);    // 输出false
+    System.out.println(num1 >= 15);     // 输出true
+    System.out.println(num2 <= 4);      // 输出false
+    System.out.println(num1 != num2);   // 输出true
+    System.out.println(num1 == num2);   // 输出false
+}
+            </code>
+        </pre>
+        <br>
+
+        <h2>逻辑运算符 & 条件运算符</h2>
+        <p class="H-text">逻辑运算符（也叫短路逻辑运算符、短路运算符，* 探索：为什么叫“短路” *）：“ && ”、“ || ”</p>
+        <p class="H-text">条件运算符的格式是* boolean表达式 ? 表达式A : 表达式B *，以下是直接的代码演示：</p>
+        <pre>
+            <code>
+public static void main(String[] args) {
+    System.out.println(true && true);   // 输出true
+    System.out.println(true && false);  // 输出false
+    System.out.println(true || false);  // 输出true
+    System.out.println(false || false); // 输出false
+    int num = 15 > 10 ? 15 : 10;
+    // 因为15 > 10 是true，所以是取A部分的，即取的方法是true : false，则num=15
+}
+            </code>
+        </pre>
+    </div>
+
+    <hr style="margin: 2em 0">
+
+    <div class="af-box">
+        <h2>进制转换 & 补码</h2>
+        <br>
+        <h3 class="H-title">进制转换</h3>
+        <div class="text-box">
+            <h4>二进制</h4>
+            <p class="H-text">二进制由0和1组成，每一位称为一个比特（bit）。
+                十进制数转换为二进制采用“除2取余，逆序排列”的方法，例如十进制数3转换为二进制是11。
+            </p>
+            <br>
+
+            <h4>八进制</h4>
+            <p class="H-text">八进制由0-7组成，每一位代表3个比特。十进制数转换为八进制采用“除8取余，
+                逆序排列”的方法，例如十进制数7转换为八进制是7，十进制数8转换为八进制是10。
+            </p>
+            <br>
+
+            <h4>十六进制</h4>
+            <p class="H-text">十六进制由0-9和A-F组成，每一位代表4个比特。十进制数转换为十六进制采用“除16取余，
+                逆序排列”的方法，例如十进制数15转换为十六进制是F，十进制数16转换为十六进制是10。
+            </p>
+        </div>
+        <br>
+
+        <h3 class="H-title">补码</h3>
+        <p>补码是计算机中表示有符号整数的一种方式，主要用于简化减法运算和处理负数。</p>
+        <div class="text-box">
+
+            <h4>负数的表示</h4>
+            <p class="H-text">在计算机中，有符号的数据，即带负数的二进制表示是以补码形式存储的，其最高位（最左边的位）通常作为符号位，
+                0表示正数，1表示负数。例如，在8位二进制数中，正数3表示为00000011，负数-3表示为11111101（即其补码）。
+            </p>
+            <p class="H-text">也就是说0000 0000是0，而1000 0000则是-128，
+                所以<strong style="color: red">对于 1 字节</strong>的范围是 -128~127，（0111 1111是
+                <strong>1 byte</strong> 的最大的数，即127；而 <strong>2 byte</strong> 则是32767）
+                对于无符号的 1 字节则是 0~255（1111 1111）。
+            </p>
+            <br>
+
+            <h4>正数的补码</h4>
+            <p class="H-text">正数的补码与原码相同，直接将其转换为二进制即可。例如，3的二进制是0011，其补码也是0011。</p>
+            <br>
+
+            <h4>负数的补码</h4>
+            <p class="H-text">
+                负数的补码计算方法为：先求出其绝对值的二进制，然后将每一位取反（0变1，1变0），最后在最低位加1。
+                例如，-3的计算过程是：3的二进制是0011，取反后是1100，最低位加1得到1101，所以-3的补码是1101。
+            </p>
+        </div>
+    </div>
+
+    <hr style="margin: 2em 0">
+
+    <div class="af-box">
+        <h2>位运算符（无需求的话了解即可）</h2>
+        <br>
+
+        <p class="H-text">位运算符有“ & ”、“ | ”、“ << ”、“ >> ”、“ >>> ”、“ ^ ”、“ ~ ”，它们是将byte、short、int、long、
+            <strong style="color: red">char</strong>转换成二进制操作， 而char在Java中使用的是16位的Unicode字符，
+            本质上是无符号字符，因此也可以进行按位运算。
+        </p>
+        <p>由于是直接操作二进制，因此比其他运算速度更快，一般在<strong>写框架以及需要高性能的程序</strong>用上，
+            其余场景很少见到。以下是间接的代码演示：
+        </p>
+        <pre>
+            <code>
+public static void main(String[] args) {
+    int a = 12; // 二进制：1100
+    int b = 10; // 二进制：1010
+
+    // 按位与（ & ）：逐位进行逻辑与操作
+    System.out.println(a & b); // 由于1100 & 1010的结果是1000，所以输出的是8
+
+    // 按位或（ | ）：逐位进行逻辑或操作
+    System.out.println(a | b); // 由于1100 | 1010的结果是1110，所以输出的是14
+
+    // 按位异或（ ^ ）：逐位进行逻辑异或操作
+    System.out.println(a ^ b); // 由于1100 ^ 1010的结果是0110，所以输出的是6
+
+    // 按位取反（ ~ ）：对每一位取反
+    System.out.println(~a); // 由于~1100的结果是...11110011（补码），所以输出的是-13
+
+    // 左移（ << ）：将二进制表示向左移动指定的位数
+    System.out.println(a << 2); // 由于1100左移2位的结果是110000，所以输出的是48
+
+    // 右移（ >> ）：将二进制表示向右移动指定的位数，左边补符号位
+    System.out.println(a >> 2); // 由于1100右移2位的结果是0011，所以输出的是3
+
+    // 无符号右移（ >>> ）：将二进制表示向右移动指定的位数，左边始终补0
+    System.out.println(-a >>> 2);
+    // 由于-1100的补码是...11110011，右移2位后结果是...00111100，所以输出的是1073741821
+
+    // char类型也可以进行位运算
+    char c1 = '你'; // Unicode码点为0x4F60，二进制为0000 0100 1111 0110
+    char c2 = '好'; // Unicode码点为0x597D，二进制为0000 0101 1001 0111
+
+    System.out.println(c1 & c2);
+    // 由于0000 0100 1111 0110 & 0000 0101 1001 0111的结果是0000 0100 1001 0110，
+    // 所以输出的是18784，转为字符是'䥠'
+
+    System.out.println(c1 | c2);
+    // 由于0000 0100 1111 0110 | 0000 0101 1001 0111的结果是0000 0101 1111 0111，
+    //  所以输出的是24445，转为字符是'彽'
+
+    System.out.println(c1 ^ c2);
+    // 由于0000 0100 1111 0110 ^ 0000 0101 1001 0111的结果是0000 0001 0110 0001，
+    // 所以输出的是5661，转为字符是'ᘝ'
+}
+        </code>
+    </pre>
+    </div>
+</div>
+
+<hr style="margin: 2em 0">
+
+<div class="used-box">
+    <h2>简单算法小练习：</h2>
+    <p class="H-text">你能不能用编程写出这些结果呢？（tips：不允许用循环，不允许导包）</p>
+    <br>
+
+    <div class="B-mv">
+        <ol class="B-mv">
+            <li>定义两个变量 a=7,b=9，在程序中打印出 a+b</li>
+            <li>定义三个变量 a=5, b=10, c=3，在程序中打印出 a 和 c 的和，并乘以 b</li>
+            <li>定义一个变量 a=7214，并在程序中打印出其相反的数字，即 4127，并且它必须是int类型（tips：对其取余）</li>
+            <li>（探索）定义一个变量 a='你'，并对其取反后的 int 变成八进制，（tips：利用 printf 可以不用大量计算）</li>
+        </ol>
+    </div>
+</div>
+
+<hr style="margin: 2em 0">
+
+<a class="prev-Pg" href="./page-2.html"><h3 class="title-Pg"><<< 上一页</h3></a>
+<a class="next-Pg" href="./page-4.html"><h3 class="title-Pg">下一页 >>></h3></a>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jv-page-2</title>
+    <link href="page-style.css" rel="stylesheet">
+</head>
+<body>
+<h1 class="H-title">2. 简单的Java程序</h1>
+
+<hr style="margin: 2em 0">
+
+<div class="main-box">
+    <div class="af-box">
+        <h2>最初的，以HelloWorld程序分析为例</h2>
+        <br>
+        <p class="H-text">以下是一个简单的Java程序，用于输出“Hello World!”，并对其代码进行详细分析：</p>
+
+        <div class="B-mv">
+        <pre>
+        <code>
+package PgName;
+
+import java.util.*; // 本例中只是提及，并未使用，可以删除不影响操作
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.print("Hello World!");
+        // 在控制台打印“Hello World!”字符串
+    }
+}
+        </code>
+    </pre>
+        </div>
+
+        <h3>代码分析</h3>
+        <ul class="B-mv">
+            <li>
+                <strong>package PgName;</strong><br>
+                <em>包名</em>，用于定位文件所在的目录结构。在Java中，包名通常与文件系统的目录结构相对应。例如，`package
+                PgName;`
+                表示该文件位于 `PgName` 包中。
+            </li>
+            <li>
+                <strong>import java.util.*;</strong><br>
+                <em>导入包</em>，用于调用某个包内的类和方法。`java.util.*` 表示导入 `java.util` 包中的所有类。虽然在这个简单的程序中没有使用到
+                `java.util` 包，但在更复杂的程序中，导入包是常见的操作。
+            </li>
+            <li>
+                <strong>public class HelloWorld {xxx}</strong><br>
+                <em>类声明</em>，`public` 是访问修饰符，表示该类可以被其他类访问。`HelloWorld` 是类名，类名通常与文件名一致。
+            </li>
+            <li>
+                <strong>public static void main(String[] args) {xxx}</strong><br>
+                <em>程序主入口</em>，`public` 表示该方法可以被外部调用，`static` 表示该方法是静态的（无需创建类的实例即可调用），`void`
+                表示该方法没有返回值。`main` 是程序的入口点，`String[] args` 是命令行参数数组。
+            </li>
+            <li>
+                <strong>System.out.print("Hello World!");</strong><br>
+                <em>输出语句</em>，`System.out.print` 是Java的标准输出方法，用于在控制台打印内容。`"Hello World!"` 是输出的字符串。
+            </li>
+            <li>
+                <strong>{xxx}</strong><br>
+                <em>代码块</em>，用大括号 `{}` 包裹的代码块表示方法或类的主体部分
+            </li>
+        </ul>
+    </div>
+
+    <hr style="margin: 2em 0">
+
+    <div class="af-box">
+        <h3>常见错误</h3>
+        <p class="H-text">在刚开始学习Java时，初学者可能会犯以下错误：</p>
+        <div class="B-mv">
+            <ul class="B-mv">
+                <li>花括号 “ {} ” 未能闭合或正确闭合。</li>
+                <li>将 `main` 错误地写成 `mian`。</li>
+                <li>将 `void` 错误地写成 `viod`。</li>
+                <li>忘记在类名后添加 `{}`。</li>
+                <li>忘记在语句末尾添加分号 `;`。</li>
+                <li>else......</li>
+            </ul>
+        </div>
+        <p class="H-text">在学习过程中尽可能规范代码格式，以免产生更多不必要的麻烦以及阅读性很低的代码，
+            为后续自己或他人方便阅读，尽量遵循团队约定/大众使用的代码格式。</p>
+    </div>
+
+    <hr style="margin: 2em 0">
+
+    <div class="af-box">
+        <h2>基本的Java命名规范（标识符）</h2>
+        <br>
+        <p class="H-text">在Java编程中，命名规范是代码可读性和可维护性的重要组成部分。
+            在命名时<strong style="color: red">最好不要使用中文以及其他特殊字符</strong>， 要使用ASCII码表的字符。
+            最简单的，如'a-z', 'A-Z', '0-9', '_', '$'等等，且在命名时首字符不能是数字开头，且不能以关键字作为标识符。
+        </p>
+        <br>
+        <div class="B-mv">
+            <h3>类名（大驼峰命名）</h3>
+            <p class="H-text">类名通常使用大驼峰命名法（PascalCase），例如：</p>
+            <pre style="padding-top: 1em">
+MyClass
+HelloWorld
+    </pre>
+            <h3>变量名（小驼峰命名）</h3>
+            <p class="H-text">变量名通常使用小驼峰命名法（camelCase），例如：</p>
+            <pre style="padding-top: 1em">
+temp
+control
+label
+    </pre>
+            <h3>常量名（大写+下划线）</h3>
+            <p class="H-text">常量名通常使用全大写，并用下划线分隔单词，例如：</p>
+            <pre style="padding-top: 1em">
+IP_NUMBER
+RULE
+    </pre>
+        </div>
+    </div>
+
+    <hr style="margin: 2em 0">
+
+    <div class="af-box">
+        <h2>Java中的注释类型</h2>
+        <br>
+        <p class="H-text"><strong>Attend：</strong>注释和注解不是同一个概念，后续会提及。</p>
+        <p class="H-text">以下是Java中常见的注释类型及其示例：</p>
+        <br>
+
+        <h3>单行注释</h3>
+        <p class="H-text">使用“//”，例如：</p>
+        <pre style="padding-top: 1em">
+// 此行字符将不会运行或被编译
+    </pre>
+
+        <h3>多行注释</h3>
+        <p class="H-text">使用“/* */”，例如：</p>
+        <pre style="padding-top: 1em">
+/* 此范围内任何字符将不会被运行或被编译 */
+    </pre>
+
+        <h3>文档注释</h3>
+        <p class="H-text">使用“/** */”，例如：</p>
+        <pre style="padding-top: 1em">
+/**
+* 这些注释将会显示在一些地方
+*/
+    </pre>
+        <p class="H-text">文档注释（<code>/** ... */</code>）主要用于生成API文档。这些注释会被<code>javadoc</code>工具解析，并生成HTML格式的文档，供开发者查阅。
+        </p>
+        <p class="H-text">具体显示的 “地方” 是指由<code>javadoc</code>工具生成的HTML文档页面。这些页面通常包括：</p>
+        <div class="B-mv">
+            <ul class="B-mv">
+                <li>类的文档：描述类的功能、用途以及类的继承关系。</li>
+                <li>方法的文档：描述方法的参数、返回值、异常以及方法的功能。</li>
+                <li>字段的文档：描述类的成员变量及其用途。</li>
+                <li>包的文档：描述包的功能和包含的类。</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <hr style="margin: 2em 0">
+
+    <div class="af-box">
+        <h2>Java数据类型概述</h2>
+        <br>
+
+        <p class="H-text">Java中的数据类型分为基本数据类型和引用数据类型。</p>
+        <br>
+
+        <h3>基本数据类型</h3>
+        <p class="H-text">基本数据类型是Java语言预先定义的类型，它们直接存储数据值，一个字节在二进制中是8bit，即'0000
+            0000'。以下是Java中的基本数据类型及其特点：</p>
+        <div class="B-mv">
+            <ul class="B-mv">
+                <li>byte（占用1字节，范围：-128到127）</li>
+                <li>short（占用2字节，范围：-32768到32767）</li>
+                <li>int（占用4字节，范围：-2<sup>31</sup>到2<sup>31</sup>-1）</li>
+                <li>long（占用8字节，范围：-2<sup>63</sup>到2<sup>63</sup>-1）</li>
+                <li>float（单精度浮点数，占用4字节）</li>
+                <li>double（双精度浮点数，占用8字节）</li>
+                <li>char（字符类型，占用2字节，表示Unicode字符）</li>
+                <li>boolean（布尔类型，表示真或假，存储大小未明确规定，通常为1字节）</li>
+            </ul>
+        </div>
+        <br>
+
+        <p class="H-text">对于Java中，数据在从低精度到高精度时，会产生隐式转换，顺序为：</p>
+        <p class="H-text">byte -> short -> char -> int -> long -> float -> double</p>
+        <br>
+
+        <p>若想进行强制类型转换，可在参数前加上 (数据类型)，比如你想将 char 显示为 byte，则有</p>
+        <pre>
+            <code>
+System.out.println((byte)'C' + " " + (byte)'o' + " " + (byte)'d' + " " + (byte)'e');
+// 输出结果将会是：67 111 100 101   （详情搜索ASCII码表）
+            </code>
+        </pre>
+        <p style="color: red; text-align: center">值得注意的是，Java并不能把 boolean 转换成 short、int等类型，</p>
+        <p style="color: red; text-align: center">而C++却可以转换：true -> 1；false -> 0。</p>
+        <br>
+
+        <h3>引用数据类型</h3>
+        <p class="H-text">引用数据类型是通过引用访问的数据类型，它们存储对象的内存地址。以下是常见的引用数据类型：</p>
+        <div class="B-mv">
+            <ul class="B-mv">
+                <li>变量（存储引用，指向对象或数组）</li>
+                <li>数组（存储多个相同类型的元素）</li>
+                <li>类（自定义数据类型，封装数据和方法）</li>
+                <li>接口（定义一组方法规范，由类实现）</li>
+                <li>方法（定义类的行为，可以返回引用类型或基本类型）</li>
+            </ul>
+        </div>
+        <br>
+
+        <h3>特殊类型：String</h3>
+        <p class="H-text"><code>String</code> 是一种特殊的引用类型，它表示不可变的字符序列。</p>
+        <p class="H-text"><code>String</code> 的特点：</p>
+        <div class="B-mv">
+            <ul class="B-mv">
+                <li>不可变：一旦创建，<code>String</code> 对象的内容不能被修改。</li>
+                <li>引用类型：<code>String</code> 是一个类，它继承自 <code>java.lang.Object</code>。</li>
+                <li>字符串常量池：字符串字面量会被存储在字符串常量池中，以节省内存。</li>
+                <li>常用方法：如 <code>length()</code>、<code>charAt()</code>、<code>substring()</code> 等。</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr style="margin: 2em 0">
+
+    <div class="af-box">
+        <h2>String在“改变”时的本质（无需求的话了解即可）</h2>
+        <br>
+
+        <p class="H-text">在Java中，<code>String</code> 是不可变对象。当对字符串进行“修改”操作时，实际上是在创建一个新的字符串对象。以下是一个示例：
+        </p>
+        <pre>
+            <code>
+String st = new String("nihao") + new String("nijiaosm");
+            </code>
+        </pre>
+        <p class="H-text">在这个例子中，<code>st</code> 是通过拼接两个字符串对象创建的。由于每次操作都会生成新的对象，因此它们的内存地址是不同的。
+        </p>
+
+        <p class="H-text">例如：</p>
+        <pre>
+            <code>
+String str = "nihao";
+String kbk = "ni";
+String tp = "hao";
+kbk = kbk + tp;  // 此时 kbk 是一个新的字符串对象
+            </code>
+</pre>
+        <p class="H-text">由于 <code>kbk</code> 是通过拼接生成的新对象，它的地址与 <code>str</code> 不同。因此，以下比较将返回
+            <code>false</code>：</p>
+        <pre>
+            <code>
+boolean result = (str == kbk);  // 返回 false
+            </code>
+        </pre>
+
+        <p class="H-text">然而，如果直接使用字符串字面量赋值：</p>
+        <pre>
+            <code>
+String str = "nihao";
+String kbk = "nihao";  // 或者 kbk = "ni" + "hao";
+            </code>
+        </pre>
+        <p class="H-text">在这种情况下，<code>str</code> 和 <code>kbk</code> 都指向字符串常量池中的同一个对象，因此以下比较将返回
+            <code>true</code>：
+        </p>
+        <pre>
+            <code>
+boolean result = (str == kbk);  // 返回 true
+            </code>
+        </pre>
+
+        <p class="H-text">这是因为Java中的字符串常量池会自动重用相同的字符串对象，从而节省内存。</p>
+
+        <p><strong>因此：</strong></p>
+        <ul class="B-mv">
+            <li>字符串拼接会创建新的对象，因此地址不同。</li>
+            <li>字符串常量池会重用相同的字符串对象，因此地址相同。</li>
+        </ul>
+        <br>
+        <p style="color: red; text-align: center">更多关于字符串常量池的内容，请参考Java官方文档或相关资料</p>
+    </div>
+</div>
+
+<hr style="margin: 2em 0">
+
+<a class="prev-Pg" href="./page-1.html"><h3 class="title-Pg"><<< 上一页</h3></a>
+<a class="next-Pg" href="./page-3.html"><h3 class="title-Pg">下一页 >>></h3></a>
+</body>
+</html>
