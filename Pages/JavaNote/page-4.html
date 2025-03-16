@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Jv-page-4</title>
-    <link rel="stylesheet" href="page-style.css">
+    <link href="page-style.css" rel="stylesheet">
 </head>
 <body>
 <h1 class="H-title">4. 条件控制语句</h1>
-<p style="color: red">对此，我将自制简单的流程图来辅助说明。</p>
+<p class="H-text" style="color: red">对此，我将自制简单的流程图来辅助说明。</p>
 
 <hr style="margin: 2em 0">
 
 <div class="main-box">
     <div class="af-box">
         <h2 class="text-center">基础的条件控制流程图</h2>
+        <br>
+
         <img alt="条件控制流程图" class="img-center" src="./Page-image/if-else.png"
-             style="height: 30vh" title="条件控制流程图">
+             style="width: 30vw" title="条件控制流程图">
     </div>
 
     <hr style="margin: 2em 0">
@@ -23,6 +25,7 @@
     <div class="af-box">
         <h2>条件语句</h2>
         <br>
+
         <p class="H-text">条件语句有“if”、“if-else”、“if-else if”以及更多的搭配。
             其格式中，if和else if必须要有boolean表达式，如if( true )、else if( false )、if(a > b)、else if(a < b) 等等。</p>
         <br>
@@ -51,7 +54,8 @@ public class Main {
         <br>
 
         <h3 class="H-title">if - if 示例</h3>
-        <p class="H-text">在以下示例中，分别判断 a 是否大于 b 和 b 是否小于 c。两个判断语句是独立的，互不影响。运行结果将是 "b 小于 c"。</p>
+        <p class="H-text">在以下示例中，分别判断 a 是否大于 b 和 b 是否小于 c。两个判断语句是独立的，互不影响。运行结果将是
+            "b 小于 c"。</p>
         <pre>
             <code>
 package PgName;
@@ -150,7 +154,8 @@ public class Main {
 }
             </code>
         </pre>
-        <p class="H-text">在这个示例中，switch语句根据变量day的值来决定执行哪个case块。对于本例来说，day的值是 3，则输出的是 case 3:
+        <p class="H-text">在这个示例中，switch语句根据变量day的值来决定执行哪个case块。对于本例来说，day的值是 3，则输出的是
+            case 3:
             对应的"Wednesday"。
             如果day的值不在1到7之间，则执行default块，输出"Invalid day"。
         </p>

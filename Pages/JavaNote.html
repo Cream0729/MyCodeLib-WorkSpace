@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <title>〚 JavaNote - 从心出发 〛</title>
     <link href="./NoteTable.css" rel="stylesheet">
+    <script>
+        function PgIndex(page) {
+            document.getElementById("Pg-cont").src = `./JavaNote/page-${page}.html`
+        }
+    </script>
 </head>
 <body>
+<!-- 头板块 -->
 <div class="head-table">
     <div class="SC-table">
         <a href="../index.html">
@@ -15,41 +21,46 @@
         <div class="shortCut"></div>
         <div class="shortCut"></div>
         <div class="shortCut"></div>
-        <div class="SC-search"></div>
+        <label>
+            <input class="search" type="text">
+        </label>
     </div>
 </div>
 
+<!-- 主板块 -->
 <div class="main-table">
+    <!-- 侧边栏 -->
     <div class="menu">
         <div class="menu-up">
-            <div class="test">测试用例0</div>
-            <div class="test">测试用例1</div>
-            <div class="test">测试用例2</div>
-            <div class="test">测试用例3</div>
-            <div class="test">测试用例4</div>
-            <div class="test">测试用例5</div>
-            <div class="test">测试用例6</div>
-            <div class="test">测试用例7</div>
-            <div class="test">测试用例8</div>
-            <div class="test">测试用例9</div>
-            <div class="test">测试用例10</div>
-            <div class="test">测试用例11</div>
-            <div class="test">测试用例12</div>
-            <div class="test">测试用例13</div>
-            <div class="test">测试用例14</div>
-            <div class="test">测试用例15</div>
-            <div class="test">测试用例16</div>
-            <div class="test">测试用例17</div>
-            <div class="test">测试用例18</div>
-            <div class="test">测试用例19</div>
-            <div class="test">测试用例20</div>
+            <button onclick="PgIndex(1)"><strong>Java基础导论</strong></button>
+            <button onclick="PgIndex(2)"><strong>简单的Java程序</strong></button>
+            <button onclick="PgIndex(3)"><strong>运算符的使用</strong></button>
+            <button onclick="PgIndex(4)"><strong>条件控制语句</strong></button>
+            <button onclick="PgIndex(5)"><strong>循环语句及跳转语句</strong></button>
+            <hr>
+            <button onclick="PgIndex(0)"><strong>长度测试【404】</strong></button>
+            <button onclick="PgIndex(0)"><strong>长度测试【404】</strong></button>
+            <button onclick="PgIndex(0)"><strong>长度测试【404】</strong></button>
+            <button onclick="PgIndex(0)"><strong>长度测试【404】</strong></button>
+            <button onclick="PgIndex(0)"><strong>长度测试【404】</strong></button>
+            <button onclick="PgIndex(0)"><strong>长度测试【404】</strong></button>
+            <button onclick="PgIndex(0)"><strong>长度测试【404】</strong></button>
+            <button onclick="PgIndex(0)"><strong>长度测试【404】</strong></button>
+            <button onclick="PgIndex(0)"><strong>长度测试【404】</strong></button>
+            <button onclick="PgIndex(0)"><strong>长度测试【404】</strong></button>
+            <button onclick="PgIndex(0)"><strong>长度测试【404】</strong></button>
+            <button onclick="PgIndex(0)"><strong>长度测试【404】</strong></button>
+            <button onclick="PgIndex(0)"><strong>长度测试【404】</strong></button>
+            <button onclick="PgIndex(0)"><strong>长度测试【404】</strong></button>
+            <button onclick="PgIndex(0)"><strong>长度测试【404】</strong></button>
         </div>
         <div class="menu-down">
             <p class="text-mv">你好，这只是一次长度的测试用例，所以语言是杂乱无章的对于</p>
         </div>
     </div>
 
-    <iframe class="cont" src="./JavaNote/page-1.html"></iframe>
+    <!-- 主视图 -->
+    <iframe class="cont" id="Pg-cont" src="./JavaNote/page-1.html"></iframe>
 </div>
 </body>
 </html>
